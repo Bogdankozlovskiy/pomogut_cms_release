@@ -12,6 +12,7 @@
   <script src="/static/main_page/script/custom.js?123"></script>
   <link rel="stylesheet" href="{% static './main_template/css/style.min.css' %}">
   <link rel="shortcut icon" href="{% static './main_template/images/favicon.png' %}" type="image/png">
+
   <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -62,28 +63,17 @@
     })
   </script>
   {% endif %}
-  <!-- BEGIN JIVOSITE CODE {literal} -->
-  <script type='text/javascript'>
-   (function(){ var widget_id = 'L7YUzIrTxi';var d=document;var w=window;function l(){
-      var s = document.createElement('script');
-       s.type = 'text/javascript'; s.async = true;
-          s.src = '//code.jivosite.com/script/widget/'+widget_id;
-           var ss = document.getElementsByTagName('script')[0];
-            ss.parentNode.insertBefore(s, ss);
-            }
-               if(d.readyState=='complete'){l();
-               }else{if(w.attachEvent){w.attachEvent('onload',l);
-               }
-                  else{w.addEventListener('load',l,false);
-                  }
 
-               }
-   })();
-</script>
-<!-- {/literal} END JIVOSITE CODE -->
 </head>
 
 <body>
+  <!-- битрикс 24 -->
+  <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.by/b10758688/crm/site_button/loader_4_day0xm.js');
+</script>
 
   <div class="wrapper">
     <nav class=" navbar navbar-default">
@@ -101,7 +91,8 @@
               {% for c in cats %}
                 <li><a href="{% url 'razdel-handler' type='category' slug=c.slug id=c.id %}">{{ c.title }}</a></li>
               {% endfor %}
-              <li id="FAQs_header"><a href="/pomog/FAQs/">FAQs</a></li>
+              <li id="FAQs_header"><a href="/o-nas/">О нас</a></li>
+              <li id="FAQs_header"><a href="/pomog/FAQs/">ЧАВО</a></li>
               <li><a href="/pomog/Encyclopedia_of_knowledge/">Энциклопедия знаний</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right col-lg-2 col-lg-offset-2">
@@ -166,6 +157,7 @@
           <p id="id_unicef">© 2019 UNICEF </p>
           <p id="id_unicef_belarus">Детский Фонд ООН (ЮНИСЕФ) Представительство
             в Республике Беларусь</p>
+
           <div class="links_to_follow">
             <ul class="desktop">
               <li><a href="#"><img src="{% static './main_template/images/footer/icon-facebook.svg' %}" alt=""></a></li>
@@ -181,7 +173,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12 links_to_navigation">
+      <!---  <div class="col col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12 links_to_navigation">
           {% for c in cats %}
             {% if forloop.counter < 6 %}
               <a href="{% url 'razdel-handler' type='category' slug=c.slug id=c.id %}"><p>{{ c.title }}</p></a>
@@ -193,15 +185,27 @@
             <a href="{% url 'razdel-handler' type='category' slug=c.slug id=c.id %}"><p>{{ c.title }}</p></a>
           {% endfor %}
           <a href="/pomog/FAQs/" id="FAQs_footer"><p>FAQs</p></a>
-        </div>
+        </div>-->
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12  links_to_navigation">
           {% for l in links %}
             <a href="{{ l.link }}"><p>{{ l.title }}</p></a>
           {% endfor %}
           <p hidden id="LinksFooter">hello</p><!---LinksFooter-->
+          <ul class="desktop">
+            <li><a href="#"><img src="{% static './medialibrary/2019/10/nceu18tibo.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static './medialibrary/2019/10/image001.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static './medialibrary/2019/10/94d4c90934ffcfc00e48bcb01bae8d5a.png' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static './medialibrary/2019/10/6Wn8HRdbO1o.jpg' %}" alt=""></a></li>
+          </ul>
         </div>
       </div>
-      <div class="under-footer"></div>
+      <div class="under-footer">
+        <ul class="desktop">
+          <li><a href="#"><img src="{% static './medialibrary/2019/10/nceu18tibo.jpg' %}" alt=""></a></li>
+          <li><a href="#"><img src="{% static './medialibrary/2019/10/image001.jpg' %}" alt=""></a></li>
+          <li><a href="#"><img src="{% static './medialibrary/2019/10/94d4c90934ffcfc00e48bcb01bae8d5a.png' %}" alt=""></a></li>
+          <li><a href="#"><img src="{% static './medialibrary/2019/10/6Wn8HRdbO1o.jpg' %}" alt=""></a></li>
+        </ul></div>
     </div>
     <!---{% if feincms_page %}
           <script>
@@ -248,6 +252,7 @@
         });
       });
     </script>
+      <a href="{{ l.link }}"><p>{{ l.title }}</p></a>
   </div>
 </body>
 

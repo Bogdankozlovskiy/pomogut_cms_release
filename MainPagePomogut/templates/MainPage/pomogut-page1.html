@@ -51,8 +51,8 @@
     <div class="row">
       <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 center-block header-logo">
         <img class="center-block"  src="{% static './MainPage/images/header/logo-pomogut.svg' %}" alt="">
-        <h3 class="block-center">Описание проекта в несколькиx словах (желательно не больше трех строк)</h3>
-        <a  href="#elm" class=" go_to btn btn-write center-block" ><p>Наши проекты</p></a>
+        <h3 class="block-center">Мы  оказываем информационную помощь людям в трудной жизненной ситуации</h3>
+        <a  href="#elm" class=" go_to btn btn-write center-block" ><p>Наши направления</p></a>
       </div>
     </div>
   </header>
@@ -60,29 +60,21 @@
     <div class="row">
       <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 about-title center-block">
         <p>Проект <b>POMOGUT.BY</b> — это объединение усилий и возможностей государства и гражданского общества.
-          Создавая его, мы не ставили перед собой цели заставить отказаться от употребления наркотиков.
+        <br>
           <b>Наша задача</b> — помочь тем, кто оказался один на один со своей бедой и потерялся в океане обещаний,
           предложений и услуг.</p>
       </div>
     </div>
-    <div class=" about-logos container ">
-      {% for p in partners %}
-        <div><a href={{ p.link }}><img src={{ p.url_img }} alt=""></a></div>
-      {% endfor %}
-      {% for p in partners %}
-        <div><a href={{ p.link }}><img src={{ p.url_img }} alt=""></a></div>
-      {% endfor %}
-    </div>
+
   </div>
   <div id="elm" class="project-1 project-1-background">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-6 col-sm-12  col-xs-12  project-1-title  ">
           <a href="//kids.pomogut.by"><h2 >Безопасность в сети</h2></a>
-          <p>На сайте pomogut.by мы собрали для вас самую важную информацию о проблеме наркомании.
-            Как вовремя распознать в ребенке начинающего наркомана?
-            Куда обращаться и кто может помочь? Какая ответственность
-            предусмотрена за распространение наркотиков? На эти и многие
+          <p>На сайте pomogut.by мы собрали для вас самую важную информацию о проблемах в сети.
+            Как вовремя понять что такое буллинг?
+            Куда обращаться и кто может помочь? Как с этим бороться ? На эти и многие
             другие вопросы вы найдете ответ на сайте.
           </p>
           <a href="tel:{{ phones.0 }}" class="main"><div class="buttons-number"><p>{{ phones.0 }}</p></div></a>
@@ -187,6 +179,14 @@
         </form>
       </div>
     </div>
+  </div>
+  <div class=" about-logos container ">
+    {% for p in partners %}
+      <div><a href={{ p.link }}><img src={{ p.url_img }} alt=""></a></div>
+    {% endfor %}
+    {% for p in partners %}
+      <div><a href={{ p.link }}><img src={{ p.url_img }} alt=""></a></div>
+    {% endfor %}
   </div>
   <footer>
     <div class="container">
