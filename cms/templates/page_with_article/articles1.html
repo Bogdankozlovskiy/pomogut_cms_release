@@ -17,12 +17,11 @@
   <div class="tooth">
   </div>
 {% endif %}
--+
     <div class="container categories_data">
           <div class="row">
             <div class="col col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1  ">
                 {% if type == 'category' %}
-                    <h2>Ты можешь посмотреть статьи по темам:</h2>
+                    <h2>Посмотри статьи по теме:</h2>
                 {% else %}
                 <h2>{{ title_block }}</h2>
                     <!--<h2>&nbsp;</h2>-->
@@ -54,13 +53,31 @@
         </a>
           {% endif %}
           {% if forloop.counter|divisibleby:6 %}
+
             <div class="col col-lg-12 col-md-12 col-sm-12   breakdown-articles center-block ">
-                <h2 class="text-center center-block">Разговор помогает! Мы здесь для вас </h2>
-                <p class="text-center center-block">Никакая проблема не является слишком большой или слишком маленькой. Мы здесь 24 часа в сутки, 7 дней в неделю</p>
-                <a  href="tel:{{ phones.0 }}" class="text-center breakdown-articles-buttons  center-block ">
-                    <div  class="phone-number "><img src="{% static './page_with_article/images/breakdown-phone.svg' %}" alt=""><h5>{{ phones.0 }}</h5></div>
-                </a>
+              <h2 class="text-center center-block">Разговор помогает! Мы здесь для вас! </h2>
+              <p class="text-center center-block">Никакая проблема не является слишком большой или слишком маленькой.
+          Мы здесь для вас. Звонок бесплатный и анонимный!</p>
+              <p class="text-center center-block" style="
+              margin-top: 0px;
+              margin-bottom: 0px;
+          ">24/7</p>
+              <a href="tel:8&nbsp;801&nbsp;100 16 11" class="text-center breakdown-articles-buttons  center-block " style="
+              margin-top: 0px;
+          ">
+                  <div class="phone-number "><img src="/static/page_with_article/images/breakdown-phone.svg" alt=""><h5>8 801 100 16 11</h5></div>
+                      </a>
+                      <p class="text-center center-block" style="
+              margin-top: 0px;
+              margin-bottom: 0px;
+          ">8.00-20.00</p>
+              <a href="tel:8&nbsp;801&nbsp;100 16 11" class="text-center breakdown-articles-buttons  center-block " style="
+              margin-top: 0px;
+          ">
+                      <div class="phone-number "><img src="/static/page_with_article/images/breakdown-phone.svg" alt=""><h5>8 801 201 55 55</h5></div>
+              </a>
             </div>
+
           {% endif %}
         {% endfor %}
       </div>
@@ -100,7 +117,15 @@
         fix_size();
     });
     </script>
+    <script type="text/javascript" >
+        var size = 48,
+        newsContent= $('.title-kids .title-teenagers '),
+        newsText = newsContent.text();
 
+    if(newsText.length > size){
+      newsContent.text( newsText.slice(0, size) + ' ...');
+    }
+    </script>
 
 
 {% endblock %}
