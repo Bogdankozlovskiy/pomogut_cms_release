@@ -9,7 +9,7 @@
   <div class="container single-column">
     <div class="row ">
       <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 ">
-	{% if feincms_page.title|length > 42 %}
+	{% if feincms_page.title|length > 420 %}
 	<h2 class="text-center">{{ feincms_page.title|slice:':42' }}...</h2>
 	{% else %}
         <h2 class="text-center">{{ feincms_page.title }}</h2>
