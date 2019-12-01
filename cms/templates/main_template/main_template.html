@@ -12,7 +12,12 @@
   <script src="/static/main_page/script/custom.js?123"></script>
   <link rel="stylesheet" href="{% static './main_template/css/style.min.css' %}">
   <link rel="shortcut icon" href="{% static './main_template/images/favicon.png' %}" type="image/png">
-
+	<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.by/b5628119/crm/site_button/loader_5_9riglr.js');
+</script>
   <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -158,22 +163,22 @@
           <p id="id_unicef">© 2019 UNICEF </p>
           <p id="id_unicef_belarus">Детский Фонд ООН (ЮНИСЕФ) Представительство
             в Республике Беларусь</p>
-                    <div class="links_to_follow">
+                       <div class="links_to_follow">
             <ul class="desktop">
-              <li><a href="#"><img src="{% static './main_template/images/footer/icon-facebook.svg' %}" alt=""></a></li>
+            <!---    <li><a href="#"><img src="{% static './main_template/images/footer/icon-facebook.svg' %}" alt=""></a></li>
               <li><a href="#"><img src="{% static './main_template/images/footer/icon-twitter.svg' %}" alt=""></a></li>
               <li><a href="#"><img src="{% static './main_template/images/footer/icon-vk.svg' %}" alt=""></a></li>
-              <li><a href="#"><img src="{% static './main_template/images/footer/icon-viber.svg' %}" alt=""></a></li>
+              <li><a href="#"><img src="{% static './main_template/images/footer/icon-viber.svg' %}" alt=""></a></li>      -->
             </ul>
             <ul class="mobile">
-              <li><a href="#"><img src="{% static './main_template/images/footer-mobile/icon-facebook.svg' %}" alt=""></a></li>
+          <!---      <li><a href="#"><img src="{% static './main_template/images/footer-mobile/icon-facebook.svg' %}" alt=""></a></li>
               <li><a href="#"><img src="{% static './main_template/images/footer-mobile/icon-twitter.svg' %}" alt=""></a></li>
               <li><a href="#"><img src="{% static './main_template/images/footer-mobile/icon-vk.svg' %}" alt=""></a></li>
-              <li><a href="#"><img src="{% static './main_template/images/footer-mobile/icon-viber.svg' %}" alt=""></a></li>
+              <li><a href="#"><img src="{% static './main_template/images/footer-mobile/icon-viber.svg' %}" alt=""></a></li>      -->
             </ul>
           </div>
         </div>
-      <!---  <div class="col col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12 links_to_navigation">
+   <!---  <div class="col col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12 links_to_navigation">
           {% for c in cats %}
             {% if forloop.counter < 6 %}
               <a href="{% url 'razdel-handler' type='category' slug=c.slug id=c.id %}"><p>{{ c.title }}</p></a>
@@ -199,10 +204,11 @@
   ">
 
   <ul class="desktop" >
-          <li style =" border-radius: 100px;">  <a href="https://nces.by"><img src="{% static './main_template/images/nceu18tibo.png' %}" width="90" height="90" alt=""><figcaption style ="color:#fff;"></figcaption></a>  </li>
-                  <li >  <a href="https://www.polskapomoc.gov.pl/Polish,Aid,160.html"><img src="{% static './main_template/images/image002.jpg' %}" width="125" height="76" alt=""><figcaption style ="color:#fff;"></figcaption></a></li>
-                  <li >  <a href="https://www.unicef.by/"><img src="{% static './main_template/images/UNICEF_ForEveryChild_White_Vertical_RGB_144ppi_RU.png' %}" bgcolor="#fff" width="135" height="78" alt=""><figcaption style ="color:#fff;"></figcaption></a></li>
-                  <li style =" border-radius: 100px;">  <a href="https://mvd.gov.by/ru"><img src="{% static './main_template/images/6Wn8HRdbO1o.png' %}" width="100" height="100" alt=""> <figcaption style ="color:#fff;"></figcaption></a>
+ <li style =" border-radius: 100px;">  <a href="https://mvd.gov.by/ru"><img src="{% static './main_template/images/6Wn8HRdbO1o.png' %}" width="90" height="90" alt=""> <figcaption style ="color:#fff;"></figcaption></a>
+          <li style =" border-radius: 100px;">  <a href="https://nces.by"><img src="{% static './main_template/images/nceu18tibo.png' %}" width="80" height="80" alt=""><figcaption style ="color:#fff;"></figcaption></a>  </li>
+                  <li >  <a href="https://www.polskapomoc.gov.pl/Polish,Aid,160.html"><img src="{% static './main_template/images/image002.jpg' %}" width="112" height="68" alt=""><figcaption style ="color:#fff;"></figcaption></a></li>
+                  <li >  <a href="https://www.unicef.by/"><img src="{% static './main_template/images/UNICEF_ForEveryChild_White_Vertical_RGB_144ppi_RU.png' %}" bgcolor="#fff" width="121" height="70" alt=""><figcaption style ="color:#fff;"></figcaption></a></li>
+                 
                   </li>
                 </ul>
   </div>
@@ -210,8 +216,8 @@
       <div class="under-footer">
       </div>
     </div>
-    <!---{% if feincms_page %}
-          <script>
+    {% if feincms_page %}
+         <!--- <script>
             $.ajax({
               url:'/pomog/counter_children/',
               success:function(data){
@@ -222,7 +228,7 @@
                 console.log(data)
               }
             })
-          </script>
+          </script> -->
           <link rel="stylesheet" href="{% static './counter/css/multi-counter-widget.min.css' %}">
           <div class="multi-counter-widget">
             <div class="container">
@@ -252,13 +258,13 @@
             return false;
           });
         });
-      </script>-->
+      </script>
+  <!---  <a href="#"  class="scrollup" ></a> -->
+	
 
-    <a href="https://pomogut.bitrix24.by/online/kids"  class="scrollup" ><img src="{% static './MainPage/images/project/chat-icon.svg' %}" alt=""> </a>
 
 
-
-      <a href="{{ l.link }}"><p>{{ l.title }}</p></a>
+     <!---   <a href="{{ l.link }}"><p>{{ l.title }}</p></a>-->
 
   </div>
 </body>

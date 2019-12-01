@@ -118,6 +118,7 @@ $(document).on('ready', function() {
     infinite: false,
     slidesToScroll: 3,
     arrows: true,
+    variableWidth: true,
 
     responsive: [{
         breakpoint: 1199,

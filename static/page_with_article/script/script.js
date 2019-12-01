@@ -147,7 +147,7 @@ $(document).on('ready', function() {
         });
         if ($(window).width()<'590') {
             $('.categories_data .tags').css("display","none");
-        }
+        }     
       $('.categories').slick({
         slidesToShow: 5,
         infinite: false,
@@ -159,7 +159,7 @@ $(document).on('ready', function() {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 1,
-              infinite: false,
+              infinite: false, centerMode: true,
             }
           },
           {
@@ -167,7 +167,7 @@ $(document).on('ready', function() {
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
-              infinite: false,
+              infinite: false, centerMode: true,
             }
           },
           {
@@ -175,14 +175,14 @@ $(document).on('ready', function() {
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              infinite: false,
+              infinite: false, centerMode: true,
             }
           }, {
             breakpoint: 641,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              infinite: false,
+              infinite: false, centerMode: true,
             }
           },
         ]
